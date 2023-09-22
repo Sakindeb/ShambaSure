@@ -2,7 +2,7 @@
     width: 250px;
     transition: width 0.3s ease-in-out;
     height: 100vh;
-    background-color: rgb(10,25,41);
+    background-color: #5c2331;
     padding-top: 28px;
 }
 .sidenavClosed {
@@ -13,9 +13,9 @@
 .sideitem {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     cursor: pointer;
-    color: #B2BAC2;
+    color: #ffffff;
     text-decoration: none;
     overflow: hidden;
 }
@@ -31,9 +31,10 @@
     align-self: center;
     align-self: flex-start;  
     justify-self: flex-end;
-    color: #B2BAC2;
+    color: #ffffff;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding-left: 20px;
+    padding: 20px;
 }
