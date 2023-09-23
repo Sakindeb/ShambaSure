@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--c-text-primary: #282a32;
+	--c-text-secondary: #686b87;
+	--c-text-action: #404089;
+	--c-accent-primary: #434ce8;
+	--c-border-primary: #eff1f6;
+	--c-background-primary: #ffffff;
+	--c-background-secondary: #fdfcff;
+	--c-background-tertiary: #ecf3fe;
+	--c-background-quaternary: #e9ecf4;
+}
+
+body {
+	line-height: 1.5;
+	min-height: 100vh;
+	font-family: "Be Vietnam Pro", sans-serif;
+	background-color: var(--c-background-secondary);
+	color: var(--c-text-primary);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+:focus {
+	outline: 0;
+}
+
+.responsive-wrapper {
+	width: 90%;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	height: 80px;
+	border-bottom: 1px solid var(--c-border-primary);
+	background-color: var(--c-background-primary);
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+	& > a {
+		display: none;
+	}
+	@media (max-width: 1200px) {
+		justify-content: space-between;
+		& > a {
+			display: inline-flex;
+		}
+	}
+}
+
+.header-logo {
+	margin-right: 2.5rem;
+	a {
+		display: flex;
+		align-items: center;
+		div {
+			outline: 2px solid;
+			flex-shrink: 0;
+			position: relative;
+			&:after {
+				display: block;
+				content: "";
+				position: absolute;
+				left: 0;
+				top: auto;
+				right: 0;
+				bottom: 0;
+				overflow: hidden;
+				height: 50%;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+				background-color: rgba(#fff, 0.2);
+				backdrop-filter: blur(4px);
+			}
+		}
+	}
+}
+
+.header-navigation {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: 1200px) {
+		display: none;
+	}
+}
+
+.header-navigation-links {
+	display: flex;
+	align-items: center;
+
+	a {
+		text-decoration: none;
+		color: var(--c-text-action);
+		font-weight: 500;
+		transition: 0.15s ease;
+		& + * {
+			margin-left: 1.5rem;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--c-accent-primary);
+		}
+	}
+}
+
+.header-navigation-actions {
+	display: flex;
+	align-items: center;
+	& > .avatar {
+		margin-left: 0.75rem;
+	}
+	& > .icon-button + .icon-button {
+		margin-left: 0.25rem;
+	}
+
+	& > .button + .icon-button {
+		margin-left: 1rem;
+	}
+}
+
+.cardTitle {
+  color: #262626;
+  font-size: 1.5em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.smallDesc {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #452c2c;
+}
+
+.smallDesc {
+  font-size: 1em;
+}
+
+.goCorner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #5C2331, #5C2331);
+  border-radius: 0 4px 0 32px;
+}
+
+.goArrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    
+  }
+.card {
+  display: block;
+  position: relative;
+  max-width: 300px;
+  max-height: 320px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f6f1f1, #e1d9d9);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(135deg, #5C2331, #5C2331);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(28);
+}
+
+.card:hover .smallDesc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+}
+
+.card:hover .cardTitle {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+}

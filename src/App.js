@@ -11,6 +11,7 @@ import Settings from "./Pages/Settings";
 import Statistics from "./Pages/Statistics";
 import Login from "./Components/Login"
 import SignIn from "./Components/SignIn";
+import SettingsPage from "./Components/Dash";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/setting" element={<SettingsPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/statistics" element={<Statistics />} />
