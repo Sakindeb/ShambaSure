@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Dash.module.css"
-function SettingsPage() {
+function Dashboard() {
   return (
     <main className={styles.main}>
       <div className={styles.responsiveWrapper}>
@@ -55,4 +55,4 @@ function SettingsPage() {
   );
 }
 
-export default SettingsPage;
+export default Dashboard;
